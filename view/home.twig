@@ -3,17 +3,18 @@
 
 {% block body %}
 
-    <h1>Slim</h1>
-    <div>a microframework for PHP</div>
+    {% include 'navbar.twig' %}
 
-    <section class="section">
-        <div class="container">
-            <h1 class="title">
-                Hello World
-            </h1>
-            <p class="subtitle">
-                My first website with <strong>Bulma</strong>!
-            </p>
+    <section class="hero is-medium is-primary is-bold">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">
+                    Primary bold title
+                </h1>
+                <h2 class="subtitle">
+                    Primary bold subtitle
+                </h2>
+            </div>
         </div>
     </section>
 
