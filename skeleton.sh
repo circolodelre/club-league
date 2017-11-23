@@ -34,6 +34,7 @@ git remote set-url origin $ARTEFACT_REPO
 git pull
 git add .
 git add *
+git rm skeleton.sh --cached
 git rm .gitignore.skeleton --cached
 git commit -m "Refresh artefact"
 git push
