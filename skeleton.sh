@@ -23,8 +23,8 @@ mv .gitignore.skeleton .gitignore
 git pull
 git add .
 git add *
-git commit -m "Update skeleton"
 git rm .idea/ -r --cached
+git commit -m "Update skeleton"
 git push
 mv .gitignore .gitignore.skeleton
 
@@ -34,6 +34,7 @@ git remote set-url origin $ARTEFACT_REPO
 git pull
 git add .
 git add *
+git rm .gitignore.skeleton --cached
 git commit -m "Refresh artefact"
 git push
 mv .gitignore .gitignore.artefact
