@@ -29,7 +29,7 @@ $container['config'] = function ($c) {
 // Environment
 $container['env'] = function ($c) {
     $env = new Javanile\Dotenv\Environment(dirname(__DIR__));
-    $env->load();
+    $env->safeLoad();
     return $env;
 };
 
@@ -60,4 +60,3 @@ $container['logger'] = function ($c) {
 $container[App\Actions\HomeAction::class] = function ($c) {
     return new App\Actions\HomeAction($c->get('view'), $c->get('logger'));
 };
-
