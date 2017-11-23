@@ -13,6 +13,7 @@ storage/*.key
 .env
 Homestead.yaml
 Homestead.json
+producer
 .idea/
 repository/
 .rocketeer/
