@@ -22,11 +22,11 @@
         }
     },
     "require": {
-        "javanile/dotenv": "^0.0.2",
+        "javanile/dotenv": "^0.0.4",
         "javanile/producer": "^0.0.18",
         "danielstjules/stringy": "^3.1",
         "slim/slim": "^3.9",
-        "slim/twig-view": "^2.0",
+        "slim/twig-view": "^1.2.0",
         "slim/flash": "^0.1.0",
         "monolog/monolog": "^1.13"
     }
