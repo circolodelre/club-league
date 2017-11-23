@@ -9,7 +9,19 @@ $container['config'] = function ($c) {
     $config = [
         'db' => [
             'name' => $env->get('DB_NAME', 'localhost'),
-        ]
+        ],
+        'view' => [
+            'path' => __DIR__ . '/../view',
+            'twig' => [
+                'cache' => __DIR__ . '/../storage/cache/twig',
+                'debug' => true,
+                'auto_reload' => true,
+            ],
+        ],
+        'logger' => [
+            'name' => 'app',
+            'path' => __DIR__ . '/../storage/log/app.log',
+        ],
     ];
     return $config;
 };
@@ -24,7 +36,7 @@ $container['env'] = function ($c) {
 // Twig templates
 $container['view'] = function ($c) {
     $config = $c->get('config');
-    $view = new Slim\Views\Twig($settings['view']['template_path'], $settings['view']['twig']);
+    $view = new Slim\Views\Twig($config['view']['path'], $config['view']['twig']);
     $view->addExtension(new Slim\Views\TwigExtension($c->get('router'), $c->get('request')->getUri()));
     $view->addExtension(new Twig_Extension_Debug());
     return $view;
@@ -45,7 +57,7 @@ $container['logger'] = function ($c) {
 };
 
 // HomeAction
-$container[App\Action\HomeAction::class] = function ($c) {
-    return new App\Action\HomeAction($c->get('view'), $c->get('logger'));
+$container[App\Actions\HomeAction::class] = function ($c) {
+    return new App\Actions\HomeAction($c->get('view'), $c->get('logger'));
 };
 

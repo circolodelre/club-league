@@ -1,0 +1,5 @@
+
+watch-log:
+  files:
+  - storage/log/app.log
+  - storage/log/error.log
