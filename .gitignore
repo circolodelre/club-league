@@ -12,6 +12,8 @@ public/hot
 storage/*.key
 storage/log/*
 !storage/log/.gitkeep
+storage/cache/twig/*
+!storage/cache/twig/.gitkeep
 .env.*.php
 .env.php
 .env
