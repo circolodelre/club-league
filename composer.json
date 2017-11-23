@@ -22,7 +22,7 @@
         }
     },
     "require": {
-        "javanile/dotenv": "^0.0.5",
+        "javanile/dotenv": "^0.0.4",
         "javanile/producer": "^0.0.18",
         "danielstjules/stringy": "^3.1",
         "slim/slim": "^3.9",
