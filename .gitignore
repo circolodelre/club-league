@@ -21,3 +21,4 @@ repository/
 .rocketeer/
 .gitignore.skeleton
 skeleton.sh
+composer.lock

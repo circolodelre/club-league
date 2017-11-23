@@ -28,7 +28,7 @@ $container['config'] = function ($c) {
 
 // Environment
 $container['env'] = function ($c) {
-    $env = new Javanile\Dotenv(dirname(__DIR__));
+    $env = new Javanile\Dotenv\Environment(dirname(__DIR__));
     $env->load();
     return $env;
 };

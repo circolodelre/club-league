@@ -1,4 +1,4 @@
 <?php
 
-$app->get('/', App\Action\HomeAction::class);
+$app->get('/', App\Actions\HomeAction::class);
 
