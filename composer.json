@@ -1,12 +1,26 @@
 {
     "name": "circolodelre/club-league",
     "version": "0.0.1",
+    "license": "MIT License",
     "repositories": [
         {
             "type": "git",
             "url": "https://github.com/circolodelre/club-league"
         }
     ],
+    "type": "project",
+    "keywords": ["slim-framework", "skeleton"],
+    "authors": [
+        {
+            "name": "Francesco Bianco",
+            "email": "bianco@javanile.org
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/src"
+        }
+    },
     "require": {
         "javanile/dotenv": "^0.0.2",
         "javanile/producer": "^0.0.18",

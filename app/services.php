@@ -8,7 +8,7 @@ $container['config'] = function ($c) {
     $env = $c->get('env');
     $config = [
         'db' => [
-            'name' => $env->get('DB_NAME', 'localhost');
+            'name' => $env->get('DB_NAME', 'localhost'),
         ]
     ];
     return $config;
