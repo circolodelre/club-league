@@ -25,3 +25,5 @@
 172.23.0.1 - - [23/Nov/2017:19:59:31 +0000] "GET /css/style.css HTTP/1.1" 404 1252 "http://localhost:8056/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.75 Safari/537.36"
 172.23.0.1 - - [23/Nov/2017:20:00:22 +0000] "-" 408 0 "-" "-"
 172.23.0.1 - - [23/Nov/2017:20:00:22 +0000] "-" 408 0 "-" "-"
+172.23.0.1 - - [23/Nov/2017:20:12:09 +0000] "GET / HTTP/1.1" 200 642 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.75 Safari/537.36"
+172.23.0.1 - - [23/Nov/2017:20:12:09 +0000] "GET /css/style.css HTTP/1.1" 404 1252 "http://localhost:8056/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.75 Safari/537.36"

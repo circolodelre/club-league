@@ -10,6 +10,8 @@ app/storage/
 public/storage
 public/hot
 storage/*.key
+storage/log/*
+!storage/log/.gitkeep
 .env.*.php
 .env.php
 .env
