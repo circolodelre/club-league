@@ -8,6 +8,7 @@
         }
     ],
     "require": {
+        "javanile/dotenv": "^0.0.1",
         "javanile/producer": "^0.0.18",
         "danielstjules/stringy": "^3.1"
     }
