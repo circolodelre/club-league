@@ -20,7 +20,7 @@ $container['config'] = function ($c) {
         ],
         'logger' => [
             'name' => 'app',
-            'path' => __DIR__ . '/../storage/log/app.log',
+            'path' => $env->get('APP_LOG_FILE', __DIR__.'/../storage/log/app.log'),
         ],
     ];
     return $config;
