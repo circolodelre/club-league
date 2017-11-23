@@ -60,3 +60,13 @@ $container['logger'] = function ($c) {
 $container[App\Actions\HomeAction::class] = function ($c) {
     return new App\Actions\HomeAction($c->get('view'), $c->get('logger'));
 };
+
+// RankingAction
+$container[App\Actions\RankingAction::class] = function ($c) {
+    return new App\Actions\RankingAction($c->get('view'), $c->get('logger'));
+};
+
+// HowItWorksAction
+$container[App\Actions\HowItWorksAction::class] = function ($c) {
+    return new App\Actions\HowItWorksAction($c->get('view'), $c->get('logger'));
+};
