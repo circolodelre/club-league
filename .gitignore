@@ -1,8 +1,10 @@
-## .gitignore for slim-skeleton
+## .gitignore for club-league
 
 vendor/
 node_modules/
 npm-debug.log
+bootstrap/compiled.php
+app/storage/
 bootstrap/compiled.php
 app/storage/
 public/storage
@@ -16,8 +18,9 @@ storage/log/*
 Homestead.yaml
 Homestead.json
 producer
-.rocketeer/
 .idea/
 repository/
-.gitignore.artefact
+.rocketeer/
+.gitignore.skeleton
+skeleton.sh
 composer.lock
