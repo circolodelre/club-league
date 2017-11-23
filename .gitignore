@@ -20,3 +20,4 @@ producer
 repository/
 .rocketeer/
 .gitignore.skeleton
+skeleton.sh
