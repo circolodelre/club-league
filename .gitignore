@@ -3,6 +3,8 @@ node_modules/
 npm-debug.log
 bootstrap/compiled.php
 app/storage/
+bootstrap/compiled.php
+app/storage/
 public/storage
 public/hot
 storage/*.key
@@ -11,6 +13,7 @@ storage/*.key
 .env
 Homestead.yaml
 Homestead.json
-.rocketeer/
 .idea/
 repository/
+.rocketeer/
+.gitignore.skeleton
