@@ -1,0 +1,54 @@
+
+{% extends 'base.twig' %}
+
+{% block body %}
+
+    {% include 'navbar.twig' %}
+
+    <section class="hero is-medium is-primary is-bold">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">
+                    Primary bold title
+                </h1>
+                <h2 class="subtitle">
+                    Primary bold subtitle
+                </h2>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="columns">
+                <div class="column">
+                    <div id="board" style="width: auto"></div>
+                </div>
+                <div class="column">
+                    -
+                </div>
+            </div>
+        </div>
+        <script>
+            var onDragMove = function(newLocation, oldLocation, source,
+                                      piece, position, orientation) {
+                console.log("New location: " + newLocation);
+                console.log("Old location: " + oldLocation);
+                console.log("Source: " + source);
+                console.log("Piece: " + piece);
+                console.log("Position: " + ChessBoard.objToFen(position));
+                console.log("Orientation: " + orientation);
+                console.log("--------------------");
+            };
+
+            var cfg = {
+                draggable: true,
+                position: 'start',
+                onDragMove: onDragMove,
+                sparePieces: true
+            };
+            var board = ChessBoard('board', cfg);
+        </script>
+    </section>
+
+{% endblock %}

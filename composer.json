@@ -28,6 +28,7 @@
         "slim/slim": "^3.9",
         "slim/twig-view": "^1.2.0",
         "slim/flash": "^0.1.0",
-        "monolog/monolog": "^1.13"
+        "monolog/monolog": "^1.13",
+        "javanile/moldable": "^0.0.47"
     }
 }
