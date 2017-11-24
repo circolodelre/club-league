@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Models\Storable;
+namespace App\Models;
 
-use Javanile\Moldable\Storable as MoldableStorable
+use Javanile\Moldable\Storable as MoldableStorable;
 
 abstract class Storable extends MoldableStorable
 {

@@ -8,7 +8,19 @@ final class ClubsAction extends PageAction
 {
     public function __invoke(Request $request, Response $response, $args)
     {
-        $this->view->render($response, 'clubs.twig');
+        $this->view->render($response, 'clubs.twig', [
+            'regions' => [
+                [
+                    'name' => 'Sicilia'
+                ],
+                [
+                    'name' => 'Sicilia'
+                ],
+                [
+                    'name' => 'Sicilia'
+                ],
+            ]
+        ]);
 
         return $response;
     }

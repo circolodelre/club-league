@@ -17,7 +17,7 @@ require __DIR__ . '/../vendor/autoload.php';
 
 session_start();
 
-$app = new \Slim\App();
+$app = new Slim\App();
 
 require __DIR__ . '/../app/services.php';
 require __DIR__ . '/../app/routes.php';

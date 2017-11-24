@@ -8,7 +8,11 @@ $container['config'] = function ($c) {
     $env = $c->get('env');
     $config = [
         'db' => [
-            'name' => $env->get('DB_NAME', 'localhost'),
+            'host' => $env->get('APP_DB_HOST', 'localhost'),
+            'port' => $env->get('APP_DB_PORT', '3306'),
+            'name' => $env->get('APP_DB_NAME', 'database'),
+            'user' => $env->get('APP_DB_USER', 'root'),
+            'pass' => $env->get('APP_DB_USER', 'root'),
         ],
         'view' => [
             'path' => __DIR__ . '/../view',
@@ -24,6 +28,22 @@ $container['config'] = function ($c) {
         ],
     ];
     return $config;
+};
+
+// Database
+Javanile\Moldable\Context::registerContainer($container);
+$container['db'] = function ($c) {
+    $config = $c->get('config');
+    $db = new Javanile\Moldable\Database([
+        'host'     => $config['db']['host'],
+        'port'     => $config['db']['port'],
+        'dbname'   => $config['db']['name'],
+        'username' => $config['db']['user'],
+        'password' => $config['db']['pass'],
+        'prefix'   => 'prefix_',
+        'debug'    => true
+    ]);
+    return $db;
 };
 
 // Environment
