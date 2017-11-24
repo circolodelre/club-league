@@ -75,23 +75,3 @@ $container['logger'] = function ($c) {
     $logger->pushHandler(new Monolog\Handler\StreamHandler($config['logger']['path'], Monolog\Logger::DEBUG));
     return $logger;
 };
-
-// HomeAction
-$container[App\Actions\HomeAction::class] = function ($c) {
-    return new App\Actions\HomeAction($c->get('view'), $c->get('logger'));
-};
-
-// ClubsAction
-$container[App\Actions\ClubsAction::class] = function ($c) {
-    return new App\Actions\ClubsAction($c->get('view'), $c->get('logger'));
-};
-
-// RankingAction
-$container[App\Actions\RankingAction::class] = function ($c) {
-    return new App\Actions\RankingAction($c->get('view'), $c->get('logger'));
-};
-
-// HowItWorksAction
-$container[App\Actions\HowItWorksAction::class] = function ($c) {
-    return new App\Actions\HowItWorksAction($c->get('view'), $c->get('logger'));
-};

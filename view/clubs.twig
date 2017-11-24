@@ -1,55 +1,37 @@
-{% extends 'base.twig' %}
+{% extends 'base/section.twig' %}
 
-{% block body %}
+{% set title = 'Elenco società' %}
+{% set subtitle = 'La lista è aggiornata ogni anno' %}
 
-    {% include 'navbar.twig' %}
+{% block section %}
 
-    <section class="hero is-dark">
-        <div class="hero-body">
-            <div class="container">
-                <p class="title">
-                    Elenco società
-                </p>
-                <p class="subtitle">
-                    La lista è aggiornata ogni anno
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <section class="section">
-        <div class="container">
-            <div class="columns">
-                {% for region in regions %}
-
-                    <div class="column">
-                        <div class="card">
-                            <div class="card-content">
-                                <p class="title">
-                                    {{ region.name }}
-                                </p>
-                                <p class="subtitle">
-                                    Jeff Atwood
-                                </p>
-                            </div>
-                            <footer class="card-footer">
-                                <p class="card-footer-item">
-                                    <span>
-                                        View on <a href="">Twitter</a>
-                                    </span>
-                                </p>
-                                <p class="card-footer-item">
-                                    <span>
-                                        Share on <a href="">Facebook</a>
-                                    </span>
-                                </p>
-                            </footer>
-                        </div>
+    <div class="columns">
+        {% for region in regions %}
+            <div class="column">
+                <div class="card">
+                    <div class="card-content">
+                        <p class="title">
+                            {{ region.name }}
+                        </p>
+                        <p class="subtitle">
+                            Jeff Atwood
+                        </p>
                     </div>
-
-                {% endfor %}
+                    <footer class="card-footer">
+                        <p class="card-footer-item">
+                            <span>
+                                View on <a href="">Twitter</a>
+                            </span>
+                        </p>
+                        <p class="card-footer-item">
+                            <span>
+                                Share on <a href="">Facebook</a>
+                            </span>
+                        </p>
+                    </footer>
+                </div>
             </div>
-        </div>
-    </section>
+        {% endfor %}
+    </div>
 
 {% endblock %}

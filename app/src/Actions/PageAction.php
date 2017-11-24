@@ -11,9 +11,9 @@ class PageAction
     protected $view;
     protected $logger;
 
-    public function __construct(Twig $view, LoggerInterface $logger)
+    public function __construct($container)
     {
-        $this->view = $view;
-        $this->logger = $logger;
+        $this->view = $container->get('view');
+        $this->logger = $container->get('logger');
     }
 }

@@ -1,0 +1,15 @@
+{% extends 'base/body.twig' %}
+
+{% block body %}
+
+    {% include 'parts/navbar.twig' %}
+
+    {% include 'parts/page-title.twig' with { 'title': title, 'subtitle': subtitle } %}
+
+    <section class="section">
+        <div class="container">
+            {% block section %}{% endblock %}
+        </div>
+    </section>
+
+{% endblock %}

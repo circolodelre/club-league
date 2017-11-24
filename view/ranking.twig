@@ -1,25 +1,51 @@
+{% extends 'base/section.twig' %}
 
-{% extends 'base.twig' %}
+{% set title = 'Classifica' %}
+{% set subtitle = '' %}
 
-{% block body %}
+{% block section %}
 
-    {% include 'navbar.twig' %}
-
-    <section class="hero is-dark">
-        <div class="hero-body">
-            <div class="container">
-                <p class="title">
-                    Elenco società
-                </p>
-                <p class="subtitle">
-                    La lista è aggiornata ogni anno
-                </p>
-            </div>
+    <div class="card">
+        <div class="card-content">
+            <table class="table is-fullwidth">
+                {% for tag in ['thead', 'tfoot'] %}
+                    <{{ tag }}>
+                    <tr>
+                        <th><abbr title="Position">Pos</abbr></th>
+                        <th>Societ&agrave;</th>
+                        <th><abbr title="Punteggio">Pun</abbr></th>
+                        <th><abbr title="Won">W</abbr></th>
+                        <th><abbr title="Drawn">D</abbr></th>
+                        <th><abbr title="Lost">L</abbr></th>
+                        <th><abbr title="Goals for">GF</abbr></th>
+                        <th><abbr title="Goals against">GA</abbr></th>
+                        <th><abbr title="Goal difference">GD</abbr></th>
+                        <th><abbr title="Points">Pts</abbr></th>
+                    </tr>
+                    </{{ tag }}>
+                {% endfor %}
+                <tbody>
+                {% for club in clubs %}
+                <tr>
+                    <th>{{ loop.index }}</th>
+                    <td>
+                        <a href="/club/{{ club.id }}" title="{{ club.name }}">
+                            {{ club.name }}
+                        </a>
+                    </td>
+                    <td>38</td>
+                    <td>23</td>
+                    <td>12</td>
+                    <td>3</td>
+                    <td>68</td>
+                    <td>36</td>
+                    <td>+32</td>
+                    <td>81</td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
         </div>
-    </section>
-
-    {% for club in clubs %}
-        <div>{{ club.name }}</div>
-    {% endfor %}
+    </div>
 
 {% endblock %}
