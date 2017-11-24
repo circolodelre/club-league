@@ -1,6 +1,12 @@
 <?php
 
+date_default_timezone_set('GMT');
+
 require __DIR__ . '/vendor/autoload.php';
+
+$app = new Slim\App();
+
+require __DIR__ . '/app/services.php';
 
 $file = __DIR__.'/storage/data/clubs.html';
 
@@ -16,6 +22,9 @@ function email($string) {
 $doc = new DOMDocument();
 $doc->loadHTMLFile($file);
 
+App\Models\Club::drop('confirm');
+
+$clubs = [];
 $elements = $doc->getElementsByTagName('tr');
 
 if (!is_null($elements)) {
@@ -37,7 +46,10 @@ if (!is_null($elements)) {
                 $nodes = $element->childNodes;
                 $club['email'] = email($nodes[2]->textContent);
             case 4:
-                App\Models\Club::submit($club['id'], $club);
+                if (!in_array($club['id'], $clubs)) {
+                    App\Models\Club::insert($club);
+                    $clubs[] = $club['id'];
+                }
                 break;
         }
     }

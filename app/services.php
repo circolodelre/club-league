@@ -86,9 +86,9 @@ $container[App\Actions\ClubsAction::class] = function ($c) {
     return new App\Actions\ClubsAction($c->get('view'), $c->get('logger'));
 };
 
-// HowItWorksAction
-$container[App\Actions\HowItWorksAction::class] = function ($c) {
-    return new App\Actions\HowItWorksAction($c->get('view'), $c->get('logger'));
+// RankingAction
+$container[App\Actions\RankingAction::class] = function ($c) {
+    return new App\Actions\RankingAction($c->get('view'), $c->get('logger'));
 };
 
 // HowItWorksAction
