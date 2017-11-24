@@ -30,6 +30,13 @@ $container['config'] = function ($c) {
     return $config;
 };
 
+// Environment
+$container['env'] = function ($c) {
+    $env = new Javanile\Dotenv\Environment(dirname(__DIR__));
+    $env->safeLoad();
+    return $env;
+};
+
 // Database
 Javanile\Moldable\Context::registerContainer($container);
 $container['db'] = function ($c) {
@@ -44,13 +51,6 @@ $container['db'] = function ($c) {
         'debug'    => true
     ]);
     return $db;
-};
-
-// Environment
-$container['env'] = function ($c) {
-    $env = new Javanile\Dotenv\Environment(dirname(__DIR__));
-    $env->safeLoad();
-    return $env;
 };
 
 // Twig templates

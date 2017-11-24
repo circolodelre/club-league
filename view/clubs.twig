@@ -5,10 +5,10 @@
 
 {% block section %}
 
-    <div class="columns">
+    <div class="columns is-multiline">
         {% for region in regions %}
-            <div class="column">
-                <div class="card">
+            <div class="column is-one-third">
+                <div class="card full-height">
                     <div class="card-content">
                         <p class="title">
                             {{ region.name }}
@@ -20,12 +20,12 @@
                     <footer class="card-footer">
                         <p class="card-footer-item">
                             <span>
-                                View on <a href="">Twitter</a>
+                                <a href="/clubs/{{ region.slug }}">Elenco</a>
                             </span>
                         </p>
                         <p class="card-footer-item">
                             <span>
-                                Share on <a href="">Facebook</a>
+                                <a href="/ranking/{{ region.slug }}">Classifica</a>
                             </span>
                         </p>
                     </footer>

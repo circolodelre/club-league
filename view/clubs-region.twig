@@ -1,0 +1,27 @@
+{% extends 'base/section.twig' %}
+
+{% set title = 'Società nella regione ' ~ region.name %}
+{% set subtitle = 'La lista è aggiornata ogni anno' %}
+
+{% block section %}
+
+    <div class="columns is-multiline">
+        {% for country, clubs in countries %}
+            <div class="column is-one-third">
+                <div class="card full-height">
+                    <div class="card-content">
+                        <p class="title">{{ country }}</p>
+                        <aside class="menu">
+                            <ul class="menu-list">
+                                {% for club in clubs %}
+                                    <li><a>{{ club.name }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}

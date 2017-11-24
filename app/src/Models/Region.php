@@ -2,10 +2,9 @@
 
 namespace App\Models;
 
-class Club extends Storable
+class Region extends Storable
 {
     public $id = self::PRIMARY_KEY;
     public $name = "";
-    public $region = "";
-    public $country = "";
+    public $slug = "";
 }
